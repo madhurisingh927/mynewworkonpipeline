@@ -19,3 +19,7 @@ resource "azurerm_resource_group" "name12" {
   name = "mygit13"
   location = "westus"
 }
+resource "azurerm_resource_group" "rg" {
+  name = "myazure"
+  location = "westus"
+}

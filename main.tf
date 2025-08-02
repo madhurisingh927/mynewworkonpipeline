@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     azurerm ={
-        source = "hashicorop/azurerm"
+        source = "hashicorp/azurerm"
         version = "4.35.0"
 
     }
@@ -9,6 +9,7 @@ terraform {
 }
 provider "azurerm" {
   features{}
+
 }
 resource "azurerm_resource_group" "name" {
   name = "mygit23"

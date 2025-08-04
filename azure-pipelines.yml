@@ -3,7 +3,10 @@ trigger: none
 
 
 pool: vamika
-  
+
+variables: 
+  backendsc: 'ammupipeline' 
+ 
 steps:
 - task: TerraformInstaller@1
   displayName: terraform install
@@ -15,20 +18,20 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'ammupipeline'
+    backendServiceArm: $(backendsc)
     backendAzureRmStorageAccountName: 'shahedstg490'
     backendAzureRmContainerName: 'shahed-tfstate'
-    backendAzureRmKey: 'maddy.tfstate'
+    backendAzureRmKey: madhuri
 - task: TerraformTask@5
   displayName: terraform plan
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'ammupipeline'
+    environmentServiceNameAzureRM: $(backendsc)
 
 - task: TerraformTask@5
   displayName: terraform apply
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'ammupipeline'
+    environmentServiceNameAzureRM: $(backendsc)

@@ -2,7 +2,7 @@
 trigger: none
 
 
-pool: vamika31
+pool: vamika
   
 steps:
 - task: TerraformInstaller@1

@@ -9,14 +9,11 @@ terraform {
 }
 provider "azurerm" {
   features{}
+subscription id = "25a58ceb-2570-42e2-9d35-00b46979c51a"
 
 }
-resource "azurerm_resource_group" "name" {
-  name = "mygit23"
+resource "azurerm_resource_group" "yaml" {
+  name = "mypipeline"
   location = "westus"
 }
 
-resource "azurerm_resource_group" "name12" {
-  name = "mygit13"
-  location = "westus"
-}

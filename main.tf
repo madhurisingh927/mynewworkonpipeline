@@ -14,8 +14,8 @@ provider "azurerm" {
 subscription_id = "25a58ceb-2570-42e2-9d35-00b46979c51a"
 
 }
-resource "azurerm_resource_group" "yaml12" {
-  name = "mynewpipeline"
+resource "azurerm_resource_group" "rgg" {
+  name = "myweather23"
   location = "westus"
 }
 

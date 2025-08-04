@@ -1,0 +1,19 @@
+
+trigger: none
+
+
+pool: vamika31
+  
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'ammupipeline'
+    backendAzureRmStorageAccountName: 'shahedstg490'
+    backendAzureRmContainerName: 'shahed-tfstate'
+    backendAzureRmKey: 'maddy.tfstate'

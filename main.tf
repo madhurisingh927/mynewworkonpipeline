@@ -14,8 +14,8 @@ provider "azurerm" {
 subscription_id = "25a58ceb-2570-42e2-9d35-00b46979c51a"
 
 }
-resource "azurerm_resource_group" "yaml" {
-  name = "mypipeline"
+resource "azurerm_resource_group" "yaml12" {
+  name = "mynewpipeline"
   location = "westus"
 }
 
